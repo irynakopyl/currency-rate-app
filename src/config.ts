@@ -13,10 +13,8 @@ export const config = {
   },
   api: {
     emailServer: {
-      OAUTH_EMAIL: process.env.OAUTH_EMAIL || ('' as string),
-      OAUTH_CLIENT_ID: process.env.OAUTH_CLIENT_ID || ('' as string),
-      OAUTH_CLIENT_SECRET: process.env.OAUTH_CLIENT_SECRET || ('' as string),
-      OAUTH_REFRESH_TOKEN: process.env.OAUTH_REFRESH_TOKEN || ('' as string),
+      user: String(process.env.AUTH_EMAIL),
+      password: String(process.env.AUTH_PASSWORD),
     },
     currencyUrl: 'https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5',
   },
